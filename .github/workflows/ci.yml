@@ -1,0 +1,11 @@
+name: My Workflow
+on:
+  push: # On every push on any branch
+jobs:
+  Build: # Job name
+    runs-on: ubuntu-latest # Operating system selection
+    steps:
+      - name: Build
+        run: ./gradlew check
+        with: # Actions parameters (action name omitted)
+          java-version: 21
