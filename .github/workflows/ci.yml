@@ -7,5 +7,3 @@ jobs:
     steps:
       - name: Build
         run: ./gradlew check
-        with: # Actions parameters (action name omitted)
-          java-version: 21
