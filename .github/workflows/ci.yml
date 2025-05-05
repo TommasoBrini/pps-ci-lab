@@ -5,5 +5,11 @@ jobs:
   Build: # Job name
     runs-on: ubuntu-latest # Operating system selection
     steps:
+      - name: Setup
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: 'temurin'
+
       - name: Build
         run: ./gradlew check
